@@ -1,4 +1,5 @@
 # Homework 01
+Due the night of Sep 4 at midnight
 
 Assignment status: PENDING
 
