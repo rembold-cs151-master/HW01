@@ -1,9 +1,10 @@
 # Homework 01
-Due the night of Sep 4 at midnight
 
 Assignment status: PENDING
 
 _Please change the above to DONE when you finish and want the assignment to be graded!_
+
+Due the night of Sep 4 at midnight
 
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.
