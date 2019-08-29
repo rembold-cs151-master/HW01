@@ -1,5 +1,4 @@
 # Homework 01
----
 
 Assignment status: PENDING
 
