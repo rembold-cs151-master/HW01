@@ -12,6 +12,9 @@ import os
 import Prob3
 import Prob4
 
+def numcheck(num, ans, tol=0.02):
+    return (ans*(1-tol) < num < ans*(1+tol))
+
 class Test_WrittenWork:
     def test_pdf_present(self):
         assert os.path.isfile('HW1.pdf') == True
@@ -21,17 +24,17 @@ class Test_Prob4:
     def test_d_is_zero(self, capsys):
         Prob4.find_area(10,5,0)
         captured = capsys.readouterr()
-        assert float(captured.out.rstrip()) == 50
+        assert numcheck(float(captured.out.rstrip()),50)
 
     def test_d_is_A(self, capsys):
         Prob4.find_area(10,5,10)
         captured = capsys.readouterr()
-        assert float(captured.out.rstrip()) == 37.5
+        assert numcheck(float(captured.out.rstrip()), 37.5)
 
     def test_d_is_halfA(self, capsys):
         Prob4.find_area(10,5,5)
         captured = capsys.readouterr()
-        assert float(captured.out.rstrip()) == 34.375
+        assert numcheck(float(captured.out.rstrip()), 34.375)
 
 
 class Test_Prob3:
