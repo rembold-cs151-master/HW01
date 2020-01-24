@@ -1,5 +1,5 @@
 # Homework 01
-![](https://github.com/<user_info>/workflows/Autotesting/badge.svg)
+![](https://github.com/rembold-cs151-master/HW01/workflows/Autotesting/badge.svg)
 
 Assignment status: PENDING
 
