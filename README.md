@@ -1,10 +1,11 @@
 # Homework 01
+![](https://github.com/<user_info>/workflows/Autotesting/badge.svg)
 
 Assignment status: PENDING
 
 _Please change the above to DONE when you finish and want the assignment to be graded!_
 
-Due the night of Sep 4 at midnight
+Due the night of January 31 at midnight!
 
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.
@@ -20,4 +21,4 @@ _Don't wait until the last minute to try to make it through everything! Computer
 
 
 #### Testing:
-I'm happy to announce that I was able to implement and get working a form of automated testing for your code. As such, whenever you submit a new commit, if you click on the "Commits" button near the upper left, you'll see a list of all your past commits, with the most recent on top. It might take a minute, but next to the name of that commit a green checkmark or red x should appear, indicating if your code has passed all the automated tests. Note that this is an all or nothing indicator, I'll show you in class how you can get more feedback on which tests you are failing.
+This class will have an auto-testing framework applied to the majority of problems this semester. As such, whenever you commit new material to your repository, a sequence of tests will be run against your code to see if it is meeting all the desired requirements. A colored badge in your README should change green to reflect that everything is passing or red to indicate that something failed. I'll show you in class how you can get more feedback on which test(s) are failing so you can see about fixing that issue!
