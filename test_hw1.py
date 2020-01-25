@@ -17,47 +17,63 @@ def numcheck(num, ans, tol=0.02):
 
 class Test_WrittenWork:
     def test_pdf_present(self):
-        assert os.path.isfile('HW1.pdf') == True
+        assert os.path.isfile('HW1.pdf') == True, "You are missing the written pdf or have given it a different name!"
 
 
 class Test_Prob4:
+    def report(self, args, sol, usersol):
+        return f"\n When run with parameters of {args}, problem should print a value of {sol} but is instead printing {usersol}."
+
     def test_B_big_d_zero(self, capsys):
         Prob4.find_area(2,3,0)
         captured = capsys.readouterr()
-        assert numcheck(float(captured.out.rstrip()),13)
+        assert numcheck(float(captured.out.rstrip()),13), self.report([2,3,0],13, captured.out.rstrip())
 
     def test_B_big_d_halfA(self, capsys):
         Prob4.find_area(2,3,1)
         captured = capsys.readouterr()
-        assert numcheck(float(captured.out.rstrip()), 11)
+        assert numcheck(float(captured.out.rstrip()), 11), self.report([2,3,1],11, captured.out.rstrip())
+
 
     def test_B_big_d_A(self, capsys):
         Prob4.find_area(3,5,3)
         captured = capsys.readouterr()
-        assert numcheck(float(captured.out.rstrip()), 25)
+        assert numcheck(float(captured.out.rstrip()), 25), self.report([3,5,3],25, captured.out.rstrip())
+
 
     def test_A_big_d_zero(self, capsys):
         Prob4.find_area(6,3,0)
         captured = capsys.readouterr()
-        assert numcheck(float(captured.out.rstrip()),45)
+        assert numcheck(float(captured.out.rstrip()),45), self.report([6,3,0],45, captured.out.rstrip())
+
 
     def test_A_big_d_halfB(self, capsys):
         Prob4.find_area(2,1,0.5)
         captured = capsys.readouterr()
-        assert numcheck(float(captured.out.rstrip()), 4.5)
+        assert numcheck(float(captured.out.rstrip()), 4.5), self.report([2,1,0.5],4.5, captured.out.rstrip())
+
 
     def test_A_big_d_B(self, capsys):
         Prob4.find_area(10,5,5)
         captured = capsys.readouterr()
-        assert numcheck(float(captured.out.rstrip()), 100)
+        assert numcheck(float(captured.out.rstrip()), 100), self.report([10,5,5],100, captured.out.rstrip())
+
 
 class Test_Prob3:
+    def report(self, numbers, sol, usersol):
+        return f"The numbers {numbers} were entered of which {sol} should have been printed. But instead {usersol} was printed."
+
     def test_all_evens(self, capsys):
-        inputs = ['6', '-6', '18']
-        with mock.patch('builtins.input', side_effect=inputs):
-            Prob3.big_odd_finder()
-            cap = capsys.readouterr()
-            assert cap.out == 'No odd numbers found.\n'
+        inputs = [['6', '-6', '18'],
+                ['2', '8', '100'],
+                ['-4', '-6', '-8']
+                ]
+        for _input in inputs:
+            with mock.patch('builtins.input', side_effect=_input):
+                Prob3.big_odd_finder()
+                cap = capsys.readouterr()
+                usersol = cap.out.rstrip()
+                assert usersol == 'No odd numbers found.', self.report(_input, "No odd numbers found.", usersol)
 
     def test_all_odds(self, capsys):
         inputs = [
@@ -71,7 +87,8 @@ class Test_Prob3:
             with mock.patch('builtins.input', side_effect=_input):
                 Prob3.big_odd_finder()
                 cap = capsys.readouterr()
-                assert cap.out.rstrip() == sol
+                usersol = cap.out.rstrip()
+                assert usersol == sol, self.report(_input, sol, usersol)
 
     def test_one_odd(self, capsys):
         inputs = [
@@ -84,7 +101,8 @@ class Test_Prob3:
             with mock.patch('builtins.input', side_effect=_input):
                 Prob3.big_odd_finder()
                 cap = capsys.readouterr()
-                assert cap.out.rstrip() == sol
+                usersol = cap.out.rstrip()
+                assert usersol == sol, self.report(_input, sol, usersol)
 
     def test_two_odd(self, capsys):
         inputs = [
@@ -97,4 +115,5 @@ class Test_Prob3:
             with mock.patch('builtins.input', side_effect=_input):
                 Prob3.big_odd_finder()
                 cap = capsys.readouterr()
-                assert cap.out.rstrip() == sol
+                usersol = cap.out.rstrip()
+                assert usersol == sol, self.report(_input, sol, usersol)
