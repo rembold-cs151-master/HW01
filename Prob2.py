@@ -32,4 +32,4 @@ import math
 
 
 if __name__ == '__main__':
-    print(distance(x,y))
+    print(distance(3,5))

@@ -13,7 +13,7 @@ import Prob2
 from newspeak import negate, intensify, reinforce
 
 def numcheck(num, ans, tol=0.02):
-    return (ans*(1-tol) < num < ans*(1+tol))
+    return ((ans-tol) < num < (ans+tol))
 
 class Test_WrittenWork:
     def test_pdf_present(self):

@@ -41,4 +41,4 @@ if __name__ == '__main__':
     print(negate("cold"))
     print(intensify("cold"))
     print(reinforce(intensify("cold")))
-    print(reinforce(intensify(negate("cold"))))
+    print(reinforce(intensify(negate("good"))))
