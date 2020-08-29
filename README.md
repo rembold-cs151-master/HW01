@@ -1,24 +1,22 @@
-# Homework 01
-![](https://github.com/<user_info>/workflows/Autotesting/badge.svg)
+# Homework 1
 
 Assignment status: PENDING
 
-_Please change the above to DONE when you finish and want the assignment to be graded!_
+_Please change the above PENDING to DONE when you finish and want the assignment to be graded!_
 
-Due the night of January 31 at midnight!
+Due the night of September 3 at midnight!
 
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.
 - [ ] Include your written work in the form of a pdf! Please title the pdf 'HW1.pdf' when uploading to your repository.
-- [ ] Code for Problem 3 should be done in the appropriately named "Prob3.py" file already in the repository. Make sure to fill in the meta-data in the comments at the top! Also only print out the requested item, nothing else.
-- [ ] Code for Problem 4 should be done in the also appropriately named "Prob4.py" file in the repository. Again, please fill out the meta-data in the comments at the top, it might not be the same as for Problem 3. Again, only print out the total area, nothing else.
-	* Some gifs for helping to better understand the setup and range of motion in Problem 4 are in the Images folder.
+- [ ] Code for Problem 2 should be done in the file called `Prob2.py` in the repository. Please fill out the meta-data information in the comments at the top of the template!
+- [ ] Code for Problem 3 should be done in the file called `newspeak.py`. Again, please fill out the meta-data information, as it may not be the same.
+- [ ] Code for Problem 4 should be done in `Prob4.py`! Don't forget meta-data at the top please! This problem is left pretty flexible for how you can approach it, so I could not write any auto-tests for it.
 
-
-If you have issues or come across problems or parts of the instructions that are unclear, please don't hesitate to ask on Campuswire or via email or in person!
+If you have issues or come across problems or parts of the instructions that are unclear, please don't hesitate to ask on Discord or via email or in person!
 
 _Don't wait until the last minute to try to make it through everything! Computers (and code) have a way of sensing your desperation and choosing that exact moment to have the most random things go wrong!_
 
 
 #### Testing:
-This class will have an auto-testing framework applied to the majority of problems this semester. As such, whenever you commit new material to your repository, a sequence of tests will be run against your code to see if it is meeting all the desired requirements. A colored badge in your README should change green to reflect that everything is passing or red to indicate that something failed. I'll show you in class how you can get more feedback on which test(s) are failing so you can see about fixing that issue!
+This class will have an auto-testing framework applied to the majority of problems this semester. As such, whenever you commit new material to your repository, a sequence of tests will be run against your code to see if it is meeting all the desired requirements. If you get a green checkmark, it means everything is passing! I still look at all code in person though, so if an auto-test is failing for some silly reason, know that I'll look and score your code myself, not the auto-test.
