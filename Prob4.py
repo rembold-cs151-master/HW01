@@ -7,10 +7,11 @@
 #====================================================
 
 
-# Write your code such that the desired values are all
-# printed on one line and separated by commas
-
-
+def print_multiples():
+    """
+    Prints all the numbers between 1 and 100 which are multiples
+    of 6 and 7 but not both. One number printed per line.
+    """
 
 
 
@@ -30,5 +31,5 @@
 
 # If you used a function, make sure you uncomment the below
 # and insert the name of your function
-#if __name__ == '__main__':
-    #your_function()
+if __name__ == '__main__':
+    print_multiples()

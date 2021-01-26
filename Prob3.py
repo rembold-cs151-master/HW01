@@ -1,5 +1,5 @@
 #====================================================
-# Filename: newspeak.py (Problem 3)
+# Filename: Prob3.py 
 # 
 # Your name:
 # Who did you work with (if anyone)?:

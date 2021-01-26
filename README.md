@@ -1,10 +1,10 @@
-# Homework 1
+# Problem Set 1
 
 Assignment status: PENDING
 
 _Please change the above PENDING to DONE when you finish and want the assignment to be graded!_
 
-Due the night of September 3 at midnight!
+Due the night of January 30 at midnight!
 
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.

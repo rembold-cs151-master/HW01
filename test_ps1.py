@@ -5,61 +5,69 @@
 # correctly! Please do not change!
 
 
-import mock
 import pytest
-import os
 
-import Prob2
-from newspeak import negate, intensify, reinforce
+import Prob3
+import Prob4
+
 
 def numcheck(num, ans, tol=0.02):
     return ((ans-tol) < num < (ans+tol))
 
-class Test_WrittenWork:
-    def test_pdf_present(self):
-        assert os.path.isfile('HW1.pdf') == True, "You are missing the written pdf or have given it a different name!"
 
-class Test_Problem2:
-    def test_0_length(self):
-        submission = Prob2.distance(0,0)
-        assert numcheck(submission, 0), "Points at the origin should be returning a length of 0."
-
-    def test_2_positive(self):
-        submission = Prob2.distance(3,4)
-        assert numcheck(submission, 5), "A point located at (3,4) should be a distance 5 away."
-
-    def test_1_pos_1_neg(self):
-        submission = Prob2.distance(-3, 6)
-        assert numcheck(submission, 6.7082), "The point located at (-3,6) should be 6.7082 away."
-
-    def test_2_negative(self):
-        submission = Prob2.distance(-5, -12)
-        assert numcheck(submission, 13), "A point located at (-5, -12) should be a distance 13 away."
-
-
-class Test_Newspeak:
+class Test_Prob3:
     words = ['cold', 'good', 'bright']
+
+    def test_negate_exists(self):
+        assert "negate" in dir(Prob3), "No function called negate found. Did you name it correctly?"
+    
+    def test_intensify_exists(self):
+        assert "intensify" in dir(Prob3), "No function called intensify found. Did you name it correctly?"
+   
+    def test_reinforce_exists(self):
+        assert "reinforce" in dir(Prob3), "No function called reinforce found. Did you name it correctly?"
 
     def test_negate(self):
         sols = ['uncold', 'ungood', 'unbright']
         for word,sol in zip(self.words, sols):
-            sub = negate(word)
+            sub = Prob3.negate(word)
             assert sub.lower() == sol, f"The negation of {word} should be {sol}, but instead is {sub}."
 
     def test_intensify(self):
         sols = ['pluscold', 'plusgood', 'plusbright']
         for word,sol in zip(self.words, sols):
-            sub = intensify(word)
+            sub = Prob3.intensify(word)
             assert sub.lower() == sol, f"The intensifying of {word} should be {sol}, but instead is {sub}."
 
     def test_reinforce(self):
         sols = ['doublecold', 'doublegood', 'doublebright']
         for word,sol in zip(self.words, sols):
-            sub = reinforce(word)
+            sub = Prob3.reinforce(word)
             assert sub.lower() == sol, f"The reinforcing of {word} should be {sol}, but instead is {sub}."
 
     def test_multi_modifiers(self):
-        assert reinforce(intensify("bright")).lower() == "doubleplusbright"
-        assert intensify(negate("bad")).lower() == "plusunbad"
-        assert reinforce(intensify(negate("fair"))) == "doubleplusunfair"
+        assert Prob3.reinforce(Prob3.intensify("bright")).lower() == "doubleplusbright"
+        assert Prob3.intensify(Prob3.negate("bad")).lower() == "plusunbad"
+        assert Prob3.reinforce(Prob3.intensify(Prob3.negate("fair"))).lower() == "doubleplusunfair"
 
+class Test_Prob4:
+    
+    def test_prints_something(self, capsys):
+        Prob4.print_multiples()
+        captured = capsys.readouterr().out.rstrip()
+        assert len(captured) > 0, "Is your code actually printing out anything from inside the function? It should be!"
+
+    def test_multiples_of_six_or_seven(self, capsys):
+        Prob4.print_multiples()
+        captured = capsys.readouterr().out.rstrip()
+        values = [int(n) for n in captured.split('\n')]
+        for num in values:
+            assert num % 6 == 0 or num % 7 == 0, f"The number {num} was printed to the screen but that is not divisible by either 6 or 7."
+
+    def test_multiples_of_six_and_seven(self,capsys):
+        Prob4.print_multiples()
+        captured = capsys.readouterr().out.rstrip()
+        values = [int(n) for n in captured.split('\n')]
+        for num in values:
+            assert not (num % 6 == 0 and num % 7 == 0), f"The number {num} was printed to the screen, but it is divisible by both 6 AND 7, and thus should not be printed."
+        

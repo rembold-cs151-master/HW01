@@ -6,30 +6,18 @@
 # Estimate for time spent (in hrs)?:
 #====================================================
 
-import math
+import karel
 
-# Define your function below. Make sure you return the final value!
+# Your program should create a checkerboard pattern on any
+# rectangular world. I am defining a few functions below to
+# get you started, but you can (and should) add whatever
+# other helper functions you want below.
 
-
-
-
-
-
-
-
-
+def create_checkerboard():
+    """ Main function to create the checkerboard pattern. """
+    # You need to add code here
 
 
+# Remember to define any more helper functions you want down here
 
 
-
-
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    print(distance(3,5))
