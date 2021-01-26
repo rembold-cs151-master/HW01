@@ -8,7 +8,7 @@ Due the night of January 31 at midnight!
 
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.
-- [ ] Code for Problem 2 should be done in the file called `Prob1.py` in the repository. This is a Karel program, and has additional worlds called `Forest1.w` and `Forest2.w`. 
+- [ ] Code for Problem 1 should be done in the file called `Prob1.py` in the repository. This is a Karel program, and has additional worlds called `Forest1.w` and `Forest2.w`. 
 - [ ] Code for Problem 2 should be done in the file called `Prob2.py` in the repository. This is another Karel program and has additional worlds called `1x8.w`, `5x5.w`, `5x3.w`, and `8x1.w`. 
 - [ ] Code for Problem 3 should be done in the file called `Prob3.py`. The template is very sparse here on purpose, as you are defining the desired functions.
 - [ ] Code for Problem 4 should be done in `Prob4.py`! The template here just has a single function that you should add your code to.
