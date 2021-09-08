@@ -1,5 +1,5 @@
 #====================================================
-# Filename: Prob3.py 
+# Filename: Prob3.py
 # 
 # Your name:
 # Who did you work with (if anyone)?:
@@ -7,7 +7,12 @@
 #====================================================
 
 
-# Define negate here
+def print_multiples():
+    """
+    Prints all the numbers between 1 and 100 which are multiples
+    of 6 and 7 but not both. One number printed per line.
+    """
+    # Add your code here!
 
 
 
@@ -16,18 +21,6 @@
 
 
 
-
-# Define intensify here
-
-
-
-
-
-
-
-
-
-# Define reinforce here
 
 
 
@@ -38,7 +31,4 @@
 
 
 if __name__ == '__main__':
-    print(negate("cold"))
-    print(intensify("cold"))
-    print(reinforce(intensify("cold")))
-    print(reinforce(intensify(negate("good"))))
+    print_multiples()

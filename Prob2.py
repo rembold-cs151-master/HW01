@@ -1,23 +1,45 @@
 #====================================================
-# Filename: Prob2.py
+# Filename: Prob2.py 
 # 
 # Your name:
 # Who did you work with (if anyone)?:
 # Estimate for time spent (in hrs)?:
 #====================================================
 
-import karel
 
-# Your program should create a checkerboard pattern on any
-# rectangular world. I am defining a few functions below to
-# get you started, but you can (and should) add whatever
-# other helper functions you want below.
-
-def create_checkerboard():
-    """ Main function to create the checkerboard pattern. """
-    # You need to add code here
+# Define negate here
 
 
-# Remember to define any more helper functions you want down here
 
 
+
+
+
+
+
+# Define intensify here
+
+
+
+
+
+
+
+
+
+# Define reinforce here
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    # I've included the example in the description here for you to test against!
+    print(negate("cold"))
+    print(intensify("cold"))
+    print(reinforce(intensify("cold")))
+    print(reinforce(intensify(negate("good"))))

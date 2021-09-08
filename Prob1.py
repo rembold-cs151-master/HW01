@@ -1,5 +1,5 @@
 #====================================================
-# Filename: Prob1.py
+# Filename: Prob2.py
 # 
 # Your name:
 # Who did you work with (if anyone)?:
@@ -8,14 +8,13 @@
 
 import karel
 
-# Your program should add leaves to all the trees and then move to the
-# bottom right corner of the world. I've added the main function to get
-# you going, but you can (and should) add any helper functions you want
-# further below. Make sure to include comments explaining what each
-# function does!
+# Your program should create a checkerboard pattern on any
+# rectangular world. I am defining a few functions below to
+# get you started, but you can (and should) add whatever
+# other helper functions you want below.
 
-def dewinter():
-    """ Main function to create the add leaves to all the trees. """
+def create_checkerboard():
+    """ Main function to create the checkerboard pattern. """
     # You need to add code here
 
 
