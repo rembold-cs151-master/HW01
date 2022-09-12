@@ -72,15 +72,21 @@ class Test_Prob3:
             assert not (num % 6 == 0 and num % 7 == 0), f"The number {num} was printed to the screen, but it is divisible by both 6 AND 7, and thus should not be printed."
         
     def test_partB_returns_something(self):
-        sol = Prob3.list_divisible_by_six_or_seven()
+        sol = Prob3.list_divisible_by_six_or_seven(1,100)
         assert type(sol) == list, "Is your code actually printing out anything from inside the function? It should be!"
 
     def test_partB_multiples_of_six_or_seven(self):
-        sol = Prob3.list_divisible_by_six_or_seven()
+        sol = Prob3.list_divisible_by_six_or_seven(1,100)
         for num in sol:
             assert num % 6 == 0 or num % 7 == 0, f"The number {num} was included in your list but it is not divisible by either 6 or 7."
 
     def test_partB_multiples_of_six_and_seven(self):
-        sol = Prob3.print_divisible_by_six_or_seven()
+        sol = Prob3.list_divisible_by_six_or_seven(1,100)
         for num in sol:
             assert not (num % 6 == 0 and num % 7 == 0), f"The number {num} was included in your list, but it is divisible by both 6 AND 7, and thus should not be included."
+
+
+    def test_partB_within_thresholds(self):
+        sol = Prob3.list_divisible_by_six_or_seven(50,75)
+        for num in sol:
+            assert 50 <= num and num <= 75, f"With inputs of 50 and 75, you should only have numbers in the list between 50 and 75, but you currently have the number {num} in the list."
