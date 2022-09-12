@@ -52,22 +52,35 @@ class Test_Prob2:
 
 class Test_Prob3:
     
-    def test_prints_something(self, capsys):
-        Prob3.print_multiples()
+    def test_partA_prints_something(self, capsys):
+        Prob3.print_divisible_by_six_or_seven()
         captured = capsys.readouterr().out.rstrip()
         assert len(captured) > 0, "Is your code actually printing out anything from inside the function? It should be!"
 
-    def test_multiples_of_six_or_seven(self, capsys):
-        Prob3.print_multiples()
+    def test_partA_multiples_of_six_or_seven(self, capsys):
+        Prob3.print_divisible_by_six_or_seven()
         captured = capsys.readouterr().out.rstrip()
         values = [int(n) for n in captured.split('\n')]
         for num in values:
             assert num % 6 == 0 or num % 7 == 0, f"The number {num} was printed to the screen but that is not divisible by either 6 or 7."
 
-    def test_multiples_of_six_and_seven(self,capsys):
-        Prob3.print_multiples()
+    def test_partA_multiples_of_six_and_seven(self,capsys):
+        Prob3.print_divisible_by_six_or_seven()
         captured = capsys.readouterr().out.rstrip()
         values = [int(n) for n in captured.split('\n')]
         for num in values:
             assert not (num % 6 == 0 and num % 7 == 0), f"The number {num} was printed to the screen, but it is divisible by both 6 AND 7, and thus should not be printed."
         
+    def test_partB_returns_something(self):
+        sol = Prob3.list_divisible_by_six_or_seven()
+        assert type(sol) == list, "Is your code actually printing out anything from inside the function? It should be!"
+
+    def test_partB_multiples_of_six_or_seven(self):
+        sol = Prob3.list_divisible_by_six_or_seven()
+        for num in sol:
+            assert num % 6 == 0 or num % 7 == 0, f"The number {num} was included in your list but it is not divisible by either 6 or 7."
+
+    def test_partB_multiples_of_six_and_seven(self):
+        sol = Prob3.print_divisible_by_six_or_seven()
+        for num in sol:
+            assert not (num % 6 == 0 and num % 7 == 0), f"The number {num} was included in your list, but it is divisible by both 6 AND 7, and thus should not be included."

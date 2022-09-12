@@ -1,5 +1,5 @@
 #====================================================
-# Filename: Prob2.py
+# Filename: Prob1.py
 # 
 # Your name:
 # Who did you work with (if anyone)?:
@@ -9,7 +9,7 @@
 import karel
 
 # Your program should create a checkerboard pattern on any
-# rectangular world. I am defining a few functions below to
+# rectangular world. I am defining a function below to
 # get you started, but you can (and should) add whatever
 # other helper functions you want below.
 
