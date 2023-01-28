@@ -1,6 +1,6 @@
 # Problem Set 2
 
-Due the night of September 16 at midnight
+Due the night of February 3 at midnight
 
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.

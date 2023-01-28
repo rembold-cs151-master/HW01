@@ -11,10 +11,6 @@ import Prob2
 import Prob3
 
 
-def numcheck(num, ans, tol=0.02):
-    return ((ans-tol) < num < (ans+tol))
-
-
 class Test_Prob2:
     words = ['cold', 'good', 'bright']
 
@@ -73,7 +69,7 @@ class Test_Prob3:
         
     def test_partB_returns_something(self):
         sol = Prob3.list_divisible_by_six_or_seven(1,100)
-        assert type(sol) == list, "Is your code actually printing out anything from inside the function? It should be!"
+        assert type(sol) == list, "Is your code returning a list type object? It should be!"
 
     def test_partB_multiples_of_six_or_seven(self):
         sol = Prob3.list_divisible_by_six_or_seven(1,100)
