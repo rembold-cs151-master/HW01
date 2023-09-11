@@ -1,0 +1,15 @@
+#====================================================
+# Filename: Prob3.txt
+# 
+# Your name:
+# Who did you work with (if anyone)?:
+# Estimate for time spent (in hrs)?:
+#====================================================
+
+In the space below, describe your algorithm in an amount of detail that would ensure
+that someone clueless about the problem could still implement your solution and have
+it work for any of the allowed values of A, B, and d. Use complete sentences and organize your work nicely.
+
+---
+
+

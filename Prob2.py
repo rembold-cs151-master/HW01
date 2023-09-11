@@ -1,23 +1,12 @@
 #====================================================
-# Filename: Prob2.py 
+# Filename: Prob2.py
 # 
 # Your name:
 # Who did you work with (if anyone)?:
 # Estimate for time spent (in hrs)?:
 #====================================================
 
-
-# Define negate here
-
-
-
-
-
-
-
-
-
-# Define intensify here
+# Define your function here
 
 
 
@@ -27,19 +16,10 @@
 
 
 
-# Define reinforce here
-
-
-
-
-
-
-
-
-
+# Boilerplate
 if __name__ == '__main__':
-    # I've included the example in the description here for you to test against!
-    print(negate("cold"))
-    print(intensify("cold"))
-    print(reinforce(intensify("cold")))
-    print(reinforce(intensify(negate("good"))))
+    # Same basic testing here, but you should test MORE!
+    count = divisible_by_six_or_seven(40,60)
+    print(count)
+
+
