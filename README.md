@@ -1,7 +1,5 @@
 # Problem Set 2
 
-Due the night of September 18 at 10pm.
-
 ## Instructions:
 The pdf has all the basic instructions, but here are some additional guidelines.
 - [ ] Code for Problem 1 should be done in the file called `Prob1.py` in the repository. This is another Karel program and has additional worlds called `1x8.w`, `5x5.w`, `5x3.w`, and `8x1.w`. 
