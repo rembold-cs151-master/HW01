@@ -4,7 +4,30 @@
 # to give you feedback on if your code is working
 # correctly! Please do not change!
 
+import inspect
+import pytest
+
+import Prob1
 import Prob2
+
+class Test_Prob1:
+
+    def test_correct_number_of_inputs(self):
+        sig = inspect.signature(Prob1.third_side)
+        params = sig.parameters
+        assert len(params) == 3, f"Expected 3 inputs to your function, but found {len(params)}"
+
+    def test_returns_something(self):
+        sol = Prob1.third_side(1, 1, 10)
+        assert isinstance(sol, float), "Is your code returning a float type object? It should be!"
+
+    def test_outputs(self):
+        inputs = [(6,6,60), (10,10,90), (14.1421, 10, 45), (10, 20, 30)]
+        outputs = [6, 14.1421, 10, 12.39313]
+        for _in, _out in zip(inputs, outputs):
+            student = Prob1.third_side(*_in)
+            assert student == pytest.approx(_out, abs=0.01), f"third_side({','.join(_in)}) is giving {_out} but should be {_in}!"
+
 
 class Test_Prob2:
     

@@ -7,18 +7,18 @@
 # Estimate for time spent (in hrs)?:
 #====================================================
 
-import karel
+import run_journal
+# add your imports here!
 
-# Your program should create a checkerboard pattern on any
-# rectangular world. I am defining a function below to
-# get you started, but you can (and should) add whatever
-# other helper functions you want below.
-
-def create_checkerboard():
-    """ Main function to create the checkerboard pattern. """
+def third_side():
+    """ Fill in a docstring here """
     # You need to add code here
 
 
-# Remember to define any more helper functions you want down here
-
+# Boilerplate
+if __name__ == '__main__':
+    # A few tests to get you going, but you can always do more!
+    print(third_side(9, 9, 60))
+    print(third_side(10, 10, 90))
+    print(third_side(14.1421, 10, 45))
 

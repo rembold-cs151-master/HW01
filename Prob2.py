@@ -7,6 +7,8 @@
 # Estimate for time spent (in hrs)?:
 #====================================================
 
+import run_journal
+
 # Define your function here
 
 
