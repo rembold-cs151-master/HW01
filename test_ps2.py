@@ -26,7 +26,7 @@ class Test_Prob1:
         outputs = [6, 14.1421, 10, 12.39313]
         for _in, _out in zip(inputs, outputs):
             student = Prob1.third_side(*_in)
-            assert student == pytest.approx(_out, abs=0.01), f"third_side({','.join(_in)}) is giving {_out} but should be {_in}!"
+            assert student == pytest.approx(_out, abs=0.01), f"third_side({','.join(map(str,_in))}) is giving {student} but should be {_out}!"
 
 
 class Test_Prob2:
